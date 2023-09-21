@@ -2,7 +2,8 @@
 
 ### Output
 
-![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/2f937c92-e8e8-4ab4-ab5f-bca753ed482c)
+![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/99202d88-40c2-4355-8f65-48a3926a2459)
+
 
 
 ### Assets
