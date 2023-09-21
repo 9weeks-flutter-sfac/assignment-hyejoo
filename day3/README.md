@@ -2,7 +2,8 @@
 
 ### Output
 
-![youtubemusic_app.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d9e1380a-9842-4157-adb2-03704e4bcab0/youtubemusic_app.png)
+![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/2f937c92-e8e8-4ab4-ab5f-bca753ed482c)
+
 
 ### Assets
 
