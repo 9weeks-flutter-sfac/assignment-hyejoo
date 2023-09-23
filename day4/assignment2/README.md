@@ -2,7 +2,8 @@
 
 # Output
 
-![Screen Recording 2023-01-27 at 5.43.26 PM.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3c91986d-fb4d-450f-a30d-39d62876a9ae/Screen_Recording_2023-01-27_at_5.43.26_PM.gif)
+![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/9835e9da-388b-49f7-aadc-16c9609ae9b6)
+
 
 # Assets
 
