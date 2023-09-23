@@ -30,4 +30,8 @@ Dialog란, 앱에서 팝업창처럼 화면위에 화면을 띄우는것을 말�
     		},
     	);
     }
-    ```![Alt text](image.png)![Alt text](image-1.png)![Alt text](image-2.png)
+    ```
+    ![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/38b07c03-7df4-41e6-b3b3-47aea33274e6)
+    ![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/04707e29-7bd6-413c-b512-8a7fc5dcb6a9)
+    ![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/04cff8f0-3584-41e7-92e3-f22088b2e698)
+
