@@ -1,16 +1,21 @@
-# assignment4
+과제 4. **다음의 UI를 구성하고 각각의 조건에 맞추어 코딩하시오.**
 
-A new Flutter project.
+![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/ded0e584-f52e-4913-8b66-c6c8d228f739)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+- Sun, Moon, Star라는 값이 있으며, 
+오른쪽의 버튼을 눌렀을 때, 스위칭이 각각 될 수 있도록 함.
+- 이 때 스위칭이란, 활성화 여부를 뜻하며
+불이 들어와 있을 땐 끄고, 꺼져있을 땐 켜는 것을 뜻함.
+- FAB를 클릭하면 모든 활성화되어있는 아이콘이 비활성화됨.
 
-A few resources to get you started if this is your first Flutter project:
+4-1. 4**번의 과제를 활용하여 다음의 추가적인 UI를 구성하여 해결하시오.**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/539116a1-a15a-4bc9-ae04-71d38e1bcbbe)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+- 아이콘의 색이 켜졌을 땐 끄고, 꺼져있을 때는 켜는 시스템을 제작함.
+- “태양” 입력 후 “엔터(혹은 제출)”하였을 때, 달 아이콘의 색상이 스위칭이 되도록 함.
+- “달” 입력 후 “엔터(혹은 제출)”하였을 때, 달 아이콘의 색상이 스위칭이 되도록 함.
+- “별” 입력 후 “엔터(혹은 제출)”하였을 때, 달 아이콘의 색상이 스위칭이 되도록 함.
+- FAB를 클릭하면 모든 활성화되어있는 아이콘이 비활성화됨.
