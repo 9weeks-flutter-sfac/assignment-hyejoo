@@ -1,16 +1,24 @@
-# assignment1
+과제 1. **주어진 데이터를 활용하여 제시되는 결과를 만드는 코드를 작성하시오.** 
 
-A new Flutter project.
+**(4-1과 4-2는 페이지 전환이 되도록 만드시오)**
 
-## Getting Started
+```dart
+var mathData = [26, 2, 9, 47, 98, 24, 43, 99, 96, 45, 35, 
+			19, 37, 60, 31, 74, 26, 4, 28, 19, 59, 14, 75, 13, 
+			93, 88, 64, 15, 68, 34, 96, 48, 1, 44, 14, 11, 31, 
+			39, 28, 100, 22, 73, 78, 98, 36, 49, 74, 16, 35, 91, 
+			14, 73, 93, 49, 3, 99, 4, 29, 86, 56, 17, 13, 97, 55, 
+			94, 7, 100, 66, 59, 85, 94, 11, 16, 48, 16, 44, 75, 14, 
+			17, 88, 92, 12, 49, 35, 42, 82, 19, 27, 11, 21, 34, 27, 
+			47, 40, 66, 90, 99, 93, 63, 90];
+```
 
-This project is a starting point for a Flutter application.
+- 4-1. **모든 요소를 아래와 같이 출력하시오. (색상은 Colors.amber)**
 
-A few resources to get you started if this is your first Flutter project:
+![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/c5950b90-4ccf-44b3-b813-3feb731f2019)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 4-2. **스크롤이 가능한 형태이며 모든 수를 대상으로 
+width : [수*2], height: 24 만큼의 크기를 가진 Container를 100개를 나열하는 코드를 작성하시오.**
+
+![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/17a5ab7c-448d-4e9e-b9ad-1c355f1dd51f)
