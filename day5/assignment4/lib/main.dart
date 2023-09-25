@@ -12,11 +12,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool sun = true;
+  bool isSunActive = false;
 
-  bool moon = true;
+  bool isMoonActive = false;
 
-  bool star = true;
+  bool isStarActive = false;
 
   // This widget is the root of your application.
   @override
@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               ListTile(
-                leading: sun
+                leading: !isSunActive
                     ? Icon(Icons.sunny)
                     : Icon(
                         Icons.sunny,
@@ -37,12 +37,12 @@ class _MyAppState extends State<MyApp> {
                 trailing: IconButton(
                     icon: Icon(Icons.arrow_right_sharp),
                     onPressed: () {
-                      sun = !sun;
+                      isSunActive = !isSunActive;
                       setState(() {});
                     }),
               ),
               ListTile(
-                leading: moon
+                leading: !isMoonActive
                     ? Icon(Icons.question_mark_outlined)
                     : Icon(
                         Icons.question_mark_outlined,
@@ -52,12 +52,12 @@ class _MyAppState extends State<MyApp> {
                 trailing: IconButton(
                     icon: Icon(Icons.arrow_right_sharp),
                     onPressed: () {
-                      moon = !moon;
+                      isMoonActive = !isMoonActive;
                       setState(() {});
                     }),
               ),
               ListTile(
-                leading: star
+                leading: !isStarActive
                     ? Icon(Icons.star)
                     : Icon(
                         Icons.star,
@@ -67,17 +67,17 @@ class _MyAppState extends State<MyApp> {
                 trailing: IconButton(
                     icon: Icon(Icons.arrow_right_sharp),
                     onPressed: () {
-                      star = !star;
+                      isStarActive = !isStarActive;
                       setState(() {});
                     }),
               ),
               TextField(
                 onSubmitted: (value) {
                   if (value == "sun")
-                    sun = !sun;
+                    isSunActive = !isSunActive;
                   else if (value == "moon")
-                    moon = !moon;
-                  else if (value == "star") star = !star;
+                    isMoonActive = !isMoonActive;
+                  else if (value == "star") isStarActive = !isStarActive;
                   setState(() {});
                 },
               ),
@@ -86,9 +86,9 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-              sun = true;
-              moon = true;
-              star = true;
+              isSunActive = false;
+              isMoonActive = false;
+              isStarActive = false;
               setState(() {});
             },
             child: Icon(Icons.refresh)),
