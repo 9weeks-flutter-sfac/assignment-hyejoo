@@ -1,6 +1,7 @@
 과제 1. 다음 화면을 구현해봅니다.
 
-![8.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f763fdd-bbba-45d6-8677-39e1a021e572/b16fc00f-67f1-46fc-827d-3cec371e6af6/8.gif)
+![image](https://github.com/9weeks-flutter-sfac/assignment-hyejoo/assets/134242825/149ac701-c17c-4592-b6e1-c077cbd2f0be)
+
 
 - 다음의 URL에 데이터를 요청하여 문제를 해결합니다.
     - [https://sniperfactory.com/sfac/http_day16_dogs](https://sfacassignment-default-rtdb.firebaseio.com/.json)
