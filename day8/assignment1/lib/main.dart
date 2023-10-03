@@ -3,6 +3,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:shimmer/shimmer.dart';
 
 void main() {
   runApp(const App());
@@ -99,42 +101,121 @@ class _MyAppState extends State<MyApp> {
           } else {
             List<Map<String, dynamic>> data = snapshot.data ?? [];
             return GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, childAspectRatio: 0.8),
-              itemCount: data.length,
-              itemBuilder: (context, index) => Card(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: NetworkImage(
-                                  data[index]['url'],
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, childAspectRatio: 0.8),
+                itemCount: data.length,
+                itemBuilder: (context, index) => FutureBuilder(
+                    future: Future.delayed(
+                        Duration(seconds: 3),
+                        () => Card(
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                data[index]['url'],
+                                              ),
+                                              fit: BoxFit.cover)),
+                                      height: 180,
+                                      width: 180,
+                                    ),
+                                  ),
+                                  Text(data[index]['msg']),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 16),
+                                        child: Icon(
+                                          Icons.comment,
+                                        ),
+                                      ),
+                                      SizedBox.shrink()
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.done) {
+                        // 현재 futureBuilder의 상태가 끝났을 때
+                        return snapshot.data!;
+                      }
+                      return Shimmer.fromColors(
+                        baseColor: Colors.grey.shade300,
+                        highlightColor: Colors.grey.shade100,
+                        child: Card(
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: NetworkImage(
+                                            data[index]['url'],
+                                          ),
+                                          fit: BoxFit.cover)),
+                                  height: 180,
+                                  width: 180,
                                 ),
-                                fit: BoxFit.cover)),
-                        height: 180,
-                        width: 180,
-                      ),
-                    ),
-                    Text(data[index]['msg']),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: Icon(
-                            Icons.comment,
+                              ),
+                              Text(data[index]['msg']),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 16),
+                                    child: Icon(
+                                      Icons.comment,
+                                    ),
+                                  ),
+                                  SizedBox.shrink()
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox.shrink()
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            );
+                      );
+                    }));
+            //   Card(
+            //     child: Column(
+            //       children: [
+            //         Padding(
+            //           padding: const EdgeInsets.all(8.0),
+            //           child: Container(
+            //             decoration: BoxDecoration(
+            //                 borderRadius: BorderRadius.circular(8),
+            //                 image: DecorationImage(
+            //                     image: NetworkImage(
+            //                       data[index]['url'],
+            //                     ),
+            //                     fit: BoxFit.cover)),
+            //             height: 180,
+            //             width: 180,
+            //           ),
+            //         ),
+            //         Text(data[index]['msg']),
+            //         Row(
+            //           children: [
+            //             Padding(
+            //               padding: const EdgeInsets.only(left: 16),
+            //               child: Icon(
+            //                 Icons.comment,
+            //               ),
+            //             ),
+            //             SizedBox.shrink()
+            //           ],
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // );
           }
         },
       ),
