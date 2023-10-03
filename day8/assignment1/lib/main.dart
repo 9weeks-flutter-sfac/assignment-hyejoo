@@ -149,73 +149,9 @@ class _MyAppState extends State<MyApp> {
                       return Shimmer.fromColors(
                         baseColor: Colors.grey.shade300,
                         highlightColor: Colors.grey.shade100,
-                        child: Card(
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      image: DecorationImage(
-                                          image: NetworkImage(
-                                            data[index]['url'],
-                                          ),
-                                          fit: BoxFit.cover)),
-                                  height: 180,
-                                  width: 180,
-                                ),
-                              ),
-                              Text(data[index]['msg']),
-                              Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Icon(
-                                      Icons.comment,
-                                    ),
-                                  ),
-                                  SizedBox.shrink()
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+                        child: Card(),
                       );
                     }));
-            //   Card(
-            //     child: Column(
-            //       children: [
-            //         Padding(
-            //           padding: const EdgeInsets.all(8.0),
-            //           child: Container(
-            //             decoration: BoxDecoration(
-            //                 borderRadius: BorderRadius.circular(8),
-            //                 image: DecorationImage(
-            //                     image: NetworkImage(
-            //                       data[index]['url'],
-            //                     ),
-            //                     fit: BoxFit.cover)),
-            //             height: 180,
-            //             width: 180,
-            //           ),
-            //         ),
-            //         Text(data[index]['msg']),
-            //         Row(
-            //           children: [
-            //             Padding(
-            //               padding: const EdgeInsets.only(left: 16),
-            //               child: Icon(
-            //                 Icons.comment,
-            //               ),
-            //             ),
-            //             SizedBox.shrink()
-            //           ],
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // );
           }
         },
       ),
