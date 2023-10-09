@@ -110,7 +110,10 @@ class _SecretPageState extends State<SecretPage> {
                 },
               );
             }
-            return LinearProgressIndicator();
+            return LinearProgressIndicator(
+              color: Colors.grey,
+              backgroundColor: Colors.grey[800],
+            );
           },
         )),
       ),
