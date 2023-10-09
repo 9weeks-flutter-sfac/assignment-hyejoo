@@ -33,24 +33,33 @@ class _AuthorPageState extends State<AuthorPage> {
           elevation: 0,
         ),
         body: SafeArea(
-            child: Center(
-                child: FutureBuilder(
+            child: FutureBuilder(
           future: SecretCatApi.fetchAuthors(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               return ListView.builder(
                 itemCount: snapshot.data!.length,
                 itemBuilder: (context, index) {
+                  print(snapshot.data![index]);
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      height: 70,
+                      height: 130,
                       decoration: BoxDecoration(
                           color: Color.fromARGB(185, 33, 33, 33),
                           borderRadius: BorderRadius.circular(16)),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 10),
+                            child: CircleAvatar(
+                              backgroundColor: Colors.transparent,
+                              backgroundImage: NetworkImage(
+                                  snapshot.data![index].avatar.toString()),
+                              radius: 30,
+                            ),
+                          ),
                           Text(
                             '아이디 : ' + snapshot.data![index].id,
                             style: TextStyle(color: Colors.white),
@@ -66,9 +75,12 @@ class _AuthorPageState extends State<AuthorPage> {
                 },
               );
             }
-            return LinearProgressIndicator();
+            return LinearProgressIndicator(
+              color: Colors.grey,
+              backgroundColor: Colors.grey[800],
+            );
           },
-        ))),
+        )),
       ),
     );
   }
