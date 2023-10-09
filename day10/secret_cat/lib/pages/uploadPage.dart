@@ -52,12 +52,16 @@ class _UploadPageState extends State<UploadPage> {
                           fit: BoxFit.contain))),
             ),
             TextField(
+              maxLines: 10,
               controller: myController,
               style: TextStyle(
                 color: Colors.white,
               ),
               cursorColor: Colors.white,
               decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    borderSide: BorderSide(color: Colors.grey)),
                 fillColor: Color.fromARGB(185, 33, 33, 33),
                 filled: true,
               ),
